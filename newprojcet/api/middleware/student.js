@@ -2,18 +2,18 @@ const express = require('express'),
       { check, validationResult } = require('express-validator');
       
 
-    const checkNameStud = check('name')
+    const checkNameStud = check('Name')
             .not()
             .isEmpty()
             .withMessage('Name is required');
 
 
-    const checkEmpIDStud = check('empID')
+    const checkEmailStud = check('Email')
             .not()
             .isEmpty()
-            .withMessage('Employee ID is required');
+            .withMessage('Email is required');
             
-    module.exports = { checkNameStud ,  checkEmpIDStud} ;
+    module.exports = { checkNameStud ,  checkEmailStud} ;
 
      
 
